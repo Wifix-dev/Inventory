@@ -9,6 +9,8 @@ namespace Inventory.Entities
         public string Email { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }        
+        public DateTime UpdatedAt { get; set; }
+        //Relacion uno a muchos        ?indica null
+        public IEnumerable<Product>? Products { get; set; }
     }
 }
