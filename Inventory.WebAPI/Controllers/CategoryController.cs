@@ -43,7 +43,7 @@ namespace Inventory.WebAPI.Controllers
         public async Task<IActionResult> Post(Dtos.CategoryToCreateDTOs categoryToCreateDTOs){
 
             var categoryToCreate = _mapper.Map<Category>(categoryToCreateDTOs);
-            /*
+            /*se remplaza con mapper
             var categoryToCreate = new Category {
                 Name = categoryToCreateDTOs.Name,
                 Description = categoryToCreateDTOs.Description,
@@ -53,7 +53,7 @@ namespace Inventory.WebAPI.Controllers
             categoryToCreate.CreatedAt=DateTime.Now;
             var categoryCreated = await _categoryRepository.AddAsync(categoryToCreate);
             var categoryCreatedDto = _mapper.Map<Dtos.CategoryToListDTO>(categoryCreated);
-            /*
+            /* se remplaza con mapper
             var categoryCreatedDto = new CategoryToListDTO{
                 Id=categoryCreated.Id,
                 Name = categoryCreated.Name,
