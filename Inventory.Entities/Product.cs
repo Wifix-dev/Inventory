@@ -7,7 +7,7 @@ namespace Inventory.Entities
         public string Description { get; set; } = string.Empty;
         public string BarCode { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         //Relacion de uno a uno
         public int CategoryId {get; set; }
         public Category? Category { get; set; }

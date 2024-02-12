@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
@@ -15,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Inventory.Entities\Inventory.Entities.csproj" />
     <ProjectReference Include="..\Inventory.Persistence\Inventory.Persistence.csproj" />
+    <ProjectReference Include="..\Inventory.DTOs\Inventory.DTOs.csproj" />
   </ItemGroup>
 
 </Project>
