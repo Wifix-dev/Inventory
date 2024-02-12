@@ -15,5 +15,6 @@ namespace Inventory.DTOs.MovementType
         public bool IsInternalTransfer { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
+        
     }
 }

@@ -14,5 +14,6 @@ namespace Inventory.DTOs.InventoryStock
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public string ProductName { get; set; } = string.Empty;
+        
     }
 }

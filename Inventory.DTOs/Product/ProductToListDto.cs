@@ -15,5 +15,6 @@ namespace Inventory.DTOs.Product
 
         public string SupplierName { get; set; }= string.Empty;
         public string CategoryName { get; set; }= string.Empty;
+        
     }
 }

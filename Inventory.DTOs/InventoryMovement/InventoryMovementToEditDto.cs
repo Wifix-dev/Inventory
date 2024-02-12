@@ -12,5 +12,6 @@ namespace Inventory.DTOs.InventoryMovement
         public DateTime Date { get; set; }
         public int Quantity { get; set; }
         public int MovementTypeId { get; set; }
+        
     }
 }

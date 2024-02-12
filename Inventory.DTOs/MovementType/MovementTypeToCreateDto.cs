@@ -12,5 +12,6 @@ namespace Inventory.DTOs.MovementType
         public bool IsIncoming { get; set; }
         public bool IsOutgoing { get; set; }
         public bool IsInternalTransfer { get; set; }
+        
     }
 }

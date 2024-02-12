@@ -14,5 +14,6 @@ namespace Inventory.DTOs.InventoryMovement
         public int MovementTypeId { get; set; }
         public string MovementTypeName { get; set; }= string.Empty;
         public string ProductName { get; set; }= string.Empty;
+        
     }
 }
