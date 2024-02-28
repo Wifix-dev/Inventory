@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using AutoMapper;
 using Inventory.Entities;
 using Inventory.Persistence.Interfaces;
@@ -10,16 +7,13 @@ using Dtos = Inventory.DTOs.Supplier;
 
 namespace Inventory.WebAPI.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class SupplierController : ControllerBase
+
+    public class SupplierController : BaseApiController
     {
         private readonly ISupplierRepository _supplierRepository;
-        private readonly IMapper _mapper;
-        public SupplierController(ISupplierRepository supplierRepository,IMapper mapper)
+        public SupplierController(ISupplierRepository supplierRepository,IMapper mapper) : base(mapper)
         {
           _supplierRepository = supplierRepository;   
-          _mapper= mapper;
         }
 
         [HttpGet]
