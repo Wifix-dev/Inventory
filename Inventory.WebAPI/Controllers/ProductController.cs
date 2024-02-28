@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using Inventory.Entities;
 using Inventory.Persistence.Interfaces;
@@ -9,16 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 using Dtos = Inventory.DTOs.Product;
 namespace Inventory.WebAPI.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductController : ControllerBase
+    public class ProductController : BaseApiController
     {
         private readonly IProductRepository _productRepository;
-        private readonly IMapper _mapper;
-        public ProductController(IProductRepository productRepository,IMapper mapper)
+        public ProductController(IProductRepository productRepository,IMapper mapper) : base(mapper)
         {
           _productRepository = productRepository;   
-          _mapper= mapper;
         }
 
         [HttpGet]

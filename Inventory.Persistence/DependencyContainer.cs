@@ -39,5 +39,13 @@ namespace Inventory.Persistence
             //AddSingleton, AddTransient o AddScoped
             return services;
         }
+        public static IServiceCollection AddAuthContextSqlServer(
+            this IServiceCollection services,
+            IConfiguration configuration,
+            string connectionStringName)
+        {
+            services.AddSqlServer<AuthContext>(configuration.GetConnectionString(connectionStringName));
+            return services;
+        }
     }
 }
